@@ -1,7 +1,14 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
 <div class="container">
-  <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
-    <h2 class="text-center text-3xl md:text-5xl">Get this theme on GitHub</h2>
-    <a href="https://github.com/markteekman/accessible-astro-starter" class="text-center text-lg"> Use this theme</a>
+  <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24 bg-blue-100">
+    <h2 class="text-center text-3xl md:text-5xl">Need Immediate Care? Call Us Now!</h2>
+    <a href="tel:2087336700" class="button primary large flex items-center">
+      <Icon name="mdi:phone" class="text-xl" />(208) 733-6700
+    </a>
+    <p class="text-center text-lg">Our dedicated team is ready to provide the care you need. If you have medical emergency, call 911.</p>
   </div>
 </div>
 
@@ -20,6 +27,9 @@
     border-radius: 3px;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; // This adds space between the icon and the text
 
     &:where(:hover, :focus) {
       color: var(--neutral-100);

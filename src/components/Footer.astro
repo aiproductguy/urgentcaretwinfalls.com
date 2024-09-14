@@ -1,5 +1,6 @@
 ---
 import CallToAction from './CallToAction.astro'
+import { Icon } from 'astro-icon/components'
 
 const currentYear = new Date().getFullYear()
 ---
@@ -7,12 +8,14 @@ const currentYear = new Date().getFullYear()
 <footer>
   <CallToAction />
   <section class="py-8">
-    <div class="container">
+    <div class="container flex justify-between items-center">
       <p>
-        &copy; {currentYear} - Starter Theme for <a href="https://astro.build/">Astro</a>. Made with ❤️ by <a
-          href="https://github.com/markteekman">Mark Teekman</a
-        >.
+        &copy; {currentYear} Urgent Care of Twin Falls. Made with ❤️ by <a
+          href="https://wikiwe.org/Directory/People/Bry/Bry">Bry, The AI Product Guy</a>.
       </p>
+      <a href="tel:2087336700" class="call-icon flex items-center justify-center">
+        <Icon name="mdi:phone" class="text-xl" />
+      </a>
     </div>
   </section>
 </footer>

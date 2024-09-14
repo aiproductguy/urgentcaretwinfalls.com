@@ -9,23 +9,23 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+          <span class="text-gradient">Urgent Care</span> of Twin Falls
         </h1>
+        <p class="text-xl text-center md:text-left">
+          Providing compassionate and efficient care when you need it most. Visit us today or call (208) 733-6700 for immediate assistance.
+        </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon name="ion:star-outline" />
-            Star on GitHub
+          <a class="button primary" href="tel:2087336700">
+            <Icon name="mdi:phone" />
+            Call Now
           </a>
-          <a
-            class="button has-icon color-secondary"
-            href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
-          >
-            <Icon name="ion:bookmark-outline" />
-            Read the Docs
+          <a class="button secondary" href="/directions">
+            <Icon name="mdi:map-marker" />
+            Get Directions
           </a>
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <img class="hidden lg:block" src="/images/urgent-care-facility.webp" alt="Urgent Care of Twin Falls Facility" decoding="async" />
     </div>
   </div>
 </section>

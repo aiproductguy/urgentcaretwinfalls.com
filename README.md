@@ -1,13 +1,13 @@
-# Accessible Astro Starter
+# 🏗️ Website [JamStack](https://jamstack.org/)
+Domain Registrar: Owner's choice
+DNS: [CloudFlare.com](https://CloudFlare.com) (Free)
+Hosting: [Github.com](https://www.github.com/) (Free)
+Deployment: [Netlify.com](https://www.netlify.com/) (Free)
+Site Builder: [Astro.build](https://astro.build/) (Free, MIT)
+Base Theme: [Assessible Astro](https://accessible-astro.netlify.app/) (Free, MIT)
 
-![social-preview-image](https://user-images.githubusercontent.com/3909046/219942674-9894853e-def8-4180-84b8-6b577dacfcaa.png)
-
-Accessible Astro Starter is a ready to use, SEO and a11y friendly blogging theme. It contains plenty of accessible components to build several page types, Tailwind CSS to help you build faster and example pages such as a dynamic Blog, 404, Markdown and MDX. This theme is designed to help you build your project faster and provide a solid base for accessibility!
-
-🚀 [Live Preview](https://accessible-astro.netlify.app/)
-
-## ♿ (Accessibility) Features
-
+## 🎨 Theme Features & Accessibility
+This accessible theme is a ready to use, SEO and a11y friendly blogging theme. It contains plenty of accessible components to build several page types, Tailwind CSS to help you build faster and example pages such as a dynamic Blog, 404, Markdown and MDX. This theme is designed to build faster and provide a solid base for accessibility!
 - Astro 4.0
 - Tailwind CSS support
 - Prettier integration with `prettier-plugin-astro` and `prettier-plugin-tailwind`
@@ -33,33 +33,21 @@ Accessible Astro Starter is a ready to use, SEO and a11y friendly blogging theme
 - A collection of utility classes such as breakpoints, button classes, font settings, resets and outlines in `src/assets/scss/base`
 - View Transitions (⚠️ see [astro-docs](https://docs.astro.build/en/guides/view-transitions/#accessibility) for accessibility considerations)
 
-## 🚀 Getting started
+## Development
+Git clone this repo locally and run any of the following commands in your terminal:
+- *Use `pnpm` (rather than `npm`) for more efficient content-addressed package management*
 
-Clone this theme locally and run any of the following commands in your terminal:
+| Command            | Action                                       |
+| :----------------- | :------------------------------------------- |
+| `pnpm install`     | Installs dependencies                        |
+| `pnpm run dev`     | Starts local dev server at `localhost:4321`  |
+| `pnpm run build`   | Build your production site to `./dist/`      |
+| `pnpm run preview` | Preview your build locally, before deploying |
 
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:4321`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 📦 Other Accessible Astro projects
-
-- [Accessible Astro Dashboard](https://github.com/markteekman/accessible-astro-dashboard/)
-- [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components/)
-
-## ❤️ Helping out
-
+## Helping out
 If you find that something isn't working right then I'm always happy to hear it to improve this starter! You can contribute in many ways and forms. Let me know by either:
 
 1. [Filing an issue](https://github.com/markteekman/accessible-astro-starter/issues)
 2. [Submitting a pull request](https://github.com/markteekman/accessible-astro-starter/pulls)
 3. [Starting a discussion](https://github.com/markteekman/accessible-astro-starter/discussions)
 4. [Buying me a coffee!](https://www.buymeacoffee.com/markteekman)
-
-## ☕ Thank you!
-
-A big thank you to the creators of the awesome Astro static site generator and to all using this starter to make the web a bit more accessible for all people around the world :)
-
-[![buymeacoffee-button](https://user-images.githubusercontent.com/3909046/150683481-be070424-7bb0-4dd7-a3cb-43b5605163f5.png)](https://www.buymeacoffee.com/markteekman)

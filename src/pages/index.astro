@@ -6,67 +6,51 @@ import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
 ---
 
-<DefaultLayout title="Home">
-  <Hero />
+<DefaultLayout title="Urgent Care of Twin Falls">
+  <Hero title="Urgent Care of Twin Falls: Better Care Today" subtitle="Discover exceptional urgent care services in Twin Falls, Idaho. We treat injuries, illnesses, and more with compassion and expertise. Visit us today or call (208) 733-6700." />
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
+      <h2 class="mb-16 text-6xl">Our Services</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+        <Feature icon="mdi:hospital-building" title="Minor Injuries">
+          Ready to assist with sprains, fractures, burns, and more to help you recover quickly.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        <Feature icon="mdi:thermometer-lines" title="Illness Treatment">
+          Effective treatment for colds, flu, fevers, and more, ensuring your health is promptly restored.
         </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        <Feature icon="mdi:syringe" title="Preventative Care & Vaccinations">
+          Stay protected with our comprehensive vaccination and preventive health services.
         </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        <Feature icon="mdi:account-child" title="Pediatric Care">
+          Specialized care for children, providing a comforting and thorough approach to their health needs.
         </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        <Feature icon="mdi:stethoscope" title="Diagnostic Services">
+          In-house diagnostic tests for a quick and accurate understanding of your health concerns.
         </Feature>
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
+  <ContentMedia imgSrc="https://placehold.co/400">
+    <h2>Meet Our Caring Team</h2>
     <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
+      Led by Dr. David Christensen and Chuck Davis, our team is dedicated to providing expert and compassionate care.
     </p>
   </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
+  <ContentMedia imgSrc="/assets/img/location-front.png" reverseImg={true}>
+    <h2>Where to Find Us</h2>
     <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
+      Conveniently located at 260 Falls Avenue, Twin Falls, Idaho. Open Monday through Friday, 8:00 am – 5:00 pm.
     </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.9623927753546!2d-114.47637859999999!3d42.5773207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aca2457605db65%3A0x24920c41025270b7!2s260%20Falls%20Ave%2C%20Twin%20Falls%2C%20ID%2083301!5e0!3m2!1sen!2sus!4v1726347046896!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </ContentMedia>
   <section class="mb-32 mt-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
+      <h2 class="mb-16 text-6xl">Why Choose Us?</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
+        <Counter count="15+" title="Years of Experience" sub="Trusted Healthcare" />
+        <Counter count="Original" title="Local Legacy" sub="First Urgent Care in Twin Falls" />
+        <Counter count="Mon-Fri" title="Availability" sub="8am-5pm Walk-ins & Appointments" />
+        <Counter count="High" title="Satisfaction Rate" sub="Patient Feedback" />
       </div>
     </div>
   </section>
