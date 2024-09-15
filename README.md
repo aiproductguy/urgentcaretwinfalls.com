@@ -1,10 +1,10 @@
 # 🏗️ Website [JamStack](https://jamstack.org/)
-Domain Registrar: Owner's choice
-DNS: [CloudFlare.com](https://CloudFlare.com) (Free)
-Hosting: [Github.com](https://www.github.com/) (Free)
-Deployment: [Netlify.com](https://www.netlify.com/) (Free)
-Site Builder: [Astro.build](https://astro.build/) (Free, MIT)
-Base Theme: [Assessible Astro](https://accessible-astro.netlify.app/) (Free, MIT)
+- Domain Registrar: Owner's choice
+- DNS: [CloudFlare.com](https://CloudFlare.com) (Free)
+- Hosting: [Github.com](https://www.github.com/) (Free)
+- Deployment: [Netlify.com](https://www.netlify.com/) (Free)
+- Site Builder: [Astro.build](https://astro.build/) (Free, MIT)
+- Base Theme: [Assessible Astro](https://accessible-astro.netlify.app/) (Free, MIT)
 
 ## 🎨 Theme Features & Accessibility
 This accessible theme is a ready to use, SEO and a11y friendly blogging theme. It contains plenty of accessible components to build several page types, Tailwind CSS to help you build faster and example pages such as a dynamic Blog, 404, Markdown and MDX. This theme is designed to build faster and provide a solid base for accessibility!
