@@ -8,24 +8,23 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <span class="text-gradient">Urgent Care</span> of Twin Falls
+        <h1 class="text-center text-4xl md:text-left lg:text-8xl">
+          <span class="text-gradient">Urgent Care</span> <span class="text-4xl">of</span> Twin Falls
         </h1>
         <p class="text-xl text-center md:text-left">
           Providing compassionate and efficient care when you need it most. Visit us today or call (208) 733-6700 for immediate assistance.
+          <i>(Formerly Falls Avenue Immediate Care)</i>
         </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button primary" href="tel:2087336700">
-            <Icon name="mdi:phone" />
-            Call Now
+          <a class="button primary flex items-center justify-center gap-2" href="tel:2087336700">
+            <Icon name="mdi:phone" />Call Now
           </a>
-          <a class="button secondary" href="/directions">
-            <Icon name="mdi:map-marker" />
-            Get Directions
+          <a class="button secondary flex items-center justify-center gap-2" href="#location">
+            <Icon name="mdi:map-marker" />Get Directions
           </a>
         </div>
-      </div>
-      <img class="hidden lg:block" src="/images/urgent-care-facility.webp" alt="Urgent Care of Twin Falls Facility" decoding="async" />
+              </div>
+      <img class="hidden lg:block" src="./location-front.png" alt="Urgent Care of Twin Falls Facility" decoding="async" />
     </div>
   </div>
 </section>
@@ -36,6 +35,10 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .button {
+    display: inline-flex;
   }
 
   :global(.darkmode .text-gradient) {
