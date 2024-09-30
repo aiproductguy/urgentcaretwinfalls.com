@@ -1,9 +1,9 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
-title: Privacy Statement
+title: Privacy Policy
 ---
 
-# Privacy Statement
+# Privacy Policy
 
 We are committed to protecting your privacy and providing a safe online experience. This Privacy Statement applies to our Practice's website and governs our data collection and usage practices. By using this website, you consent to the data practices described herein.
 
