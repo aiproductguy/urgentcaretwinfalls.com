@@ -74,12 +74,28 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: 'github-dark'
-    }
+    },
+    api: {
+      baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/api/_content' : '/api/_content'
+    },
+    documentDriven: true
   },
 
   nitro: {
     preset: 'github-pages',
     static: true,
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/services/minor-injuries',
+        '/services/illness-treatment',
+        '/services/work-medical',
+        '/services/diagnostic',
+        '/services/xray',
+        '/services/physicals',
+        '/services/illnesses'
+      ]
+    },
     routeRules: {
       '/**': {
         headers: {

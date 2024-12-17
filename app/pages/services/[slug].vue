@@ -1,37 +1,35 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-    <main class="container mx-auto px-4 py-24">
-      <div v-if="service" class="mx-auto max-w-4xl">
-        <!-- Service Header -->
-        <header class="mb-16 text-center">
-          <NuxtLink to="/services" class="mb-8 inline-flex items-center text-blue-600 hover:text-blue-700">
-            <Icon icon="mdi:arrow-left" class="mr-2" />
-            Back to Services
+  <main class="container mx-auto px-4 py-24">
+    <div v-if="service" class="mx-auto max-w-4xl">
+      <!-- Service Header -->
+      <header class="mb-16 text-center">
+        <NuxtLink to="/services" class="mb-8 inline-flex items-center text-blue-600 hover:text-blue-700">
+          <Icon icon="mdi:arrow-left" class="mr-2" />
+          Back to Services
+        </NuxtLink>
+        <h1 class="text-gradient mb-6 text-5xl font-bold">{{ service.title }}</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">{{ service.description }}</p>
+      </header>
+
+      <!-- Service Content -->
+      <div class="prose prose-lg mx-auto dark:prose-invert">
+        <ContentDoc :path="`/services/${route.params.slug}`" />
+      </div>
+
+      <!-- Call to Action -->
+      <div class="mt-16 text-center">
+        <h3 class="mb-6 text-2xl font-semibold">Need Immediate Care?</h3>
+        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <a href="tel:2087336700" class="button primary inline-flex items-center justify-center">
+            <Icon icon="mdi:phone" class="mr-2" />Call Now: (208) 733-6700
+          </a>
+          <NuxtLink to="/#location" class="button secondary inline-flex items-center justify-center">
+            <Icon icon="mdi:map-marker" class="mr-2" />Get Directions
           </NuxtLink>
-          <h1 class="text-gradient mb-6 text-5xl font-bold">{{ service.title }}</h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300">{{ service.description }}</p>
-        </header>
-
-        <!-- Service Content -->
-        <div class="prose prose-lg mx-auto dark:prose-invert">
-          <ContentDoc :path="`/services/${route.params.slug}`" />
-        </div>
-
-        <!-- Call to Action -->
-        <div class="mt-16 text-center">
-          <h3 class="mb-6 text-2xl font-semibold">Need Immediate Care?</h3>
-          <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <a href="tel:2087336700" class="button primary inline-flex items-center justify-center">
-              <Icon icon="mdi:phone" class="mr-2" />Call Now: (208) 733-6700
-            </a>
-            <NuxtLink to="/#location" class="button secondary inline-flex items-center justify-center">
-              <Icon icon="mdi:map-marker" class="mr-2" />Get Directions
-            </NuxtLink>
-          </div>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
 
 <script setup>
