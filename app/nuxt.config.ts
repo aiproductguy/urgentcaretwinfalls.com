@@ -78,6 +78,8 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    preset: 'github-pages',
+    static: true,
     routeRules: {
       '/**': {
         headers: {
@@ -89,5 +91,9 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-12-17'
+  compatibilityDate: '2024-12-18',
+  ssr: false,
+  experimental: {
+    payloadExtraction: false
+  }
 })
