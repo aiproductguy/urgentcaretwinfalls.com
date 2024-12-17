@@ -1,0 +1,99 @@
+@use 'sass:math';
+@use '@/assets/scss/_variables' as *;
+
+// CSS Variables
+:root {
+  --radius-small: #{$radius-small};
+  --radius-large: #{$radius-large};
+  --gap-default: #{$gap-default};
+  --font-measure: #{$font-measure};
+  --font-family-default: #{$font-family-default};
+  --font-family-special: var(--font-family-default);
+  
+  // Light theme colors
+  --font-color: #{$font-color-light};
+  --action-color: #{$action-color-light};
+  --action-color-state: #{$action-color-state-light};
+  --background: #{$background-light};
+  --primary-background: #{$primary-background-light};
+  --neutral-background: #{$neutral-background-light};
+}
+
+// Dark mode colors
+.dark {
+  --font-color: #{$font-color-dark};
+  --action-color: #{$action-color-dark};
+  --action-color-state: #{$action-color-state-dark};
+  --background: #{$background-dark};
+  --primary-background: #{$primary-background-dark};
+  --neutral-background: #{$neutral-background-dark};
+}
+
+// Base styles
+body {
+  font-family: var(--font-family-default);
+  color: var(--font-color);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-special);
+  line-height: 1.2;
+}
+
+// Links
+a {
+  color: var(--action-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--action-color-state);
+  }
+}
+
+// Focus styles
+:focus {
+  outline: 2px solid var(--action-color);
+  outline-offset: 2px;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+// Utilities
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} 

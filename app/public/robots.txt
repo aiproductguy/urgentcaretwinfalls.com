@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://urgentcaretwinfallscom.netlify.app/sitemap.xml

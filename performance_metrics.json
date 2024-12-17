@@ -1,0 +1,89 @@
+{
+  "total_runtime_seconds": 23.835367,
+  "start_time": "2024-12-16T20:57:44.163197",
+  "end_time": "2024-12-16T20:58:07.998564",
+  "pages_analyzed": 20,
+  "average_page_latency": 1.1270532846450805,
+  "page_latencies": {
+    "https://urgentcaretwinfallscom.netlify.app": {
+      "load_time": 2.3632009029388428,
+      "timestamp": "2024-12-16T20:57:47.158176"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/#main-content": {
+      "load_time": 1.105525016784668,
+      "timestamp": "2024-12-16T20:57:48.306093"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/": {
+      "load_time": 1.142699956893921,
+      "timestamp": "2024-12-16T20:57:49.480462"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/#location": {
+      "load_time": 2.2123589515686035,
+      "timestamp": "2024-12-16T20:57:51.727492"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/team/": {
+      "load_time": 0.9184019565582275,
+      "timestamp": "2024-12-16T20:57:52.684980"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/team/#main-content": {
+      "load_time": 0.8958678245544434,
+      "timestamp": "2024-12-16T20:57:53.607447"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/Services/Injuries/": {
+      "load_time": 1.0346500873565674,
+      "timestamp": "2024-12-16T20:57:54.679654"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/services/injuries/#main-content": {
+      "load_time": 0.8837318420410156,
+      "timestamp": "2024-12-16T20:57:55.585219"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/Services/Illnesses/": {
+      "load_time": 1.0970239639282227,
+      "timestamp": "2024-12-16T20:57:56.709260"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/services/illnesses/#main-content": {
+      "load_time": 0.8246781826019287,
+      "timestamp": "2024-12-16T20:57:57.570419"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/Services/Diagnostics/": {
+      "load_time": 1.0943799018859863,
+      "timestamp": "2024-12-16T20:57:58.685393"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/services/diagnostics/#main-content": {
+      "load_time": 0.9298861026763916,
+      "timestamp": "2024-12-16T20:57:59.640913"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/Services/Physicals-Wellness-Checkups/": {
+      "load_time": 1.0543360710144043,
+      "timestamp": "2024-12-16T20:58:00.713053"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/services/physicals-wellness-checkups/#main-content": {
+      "load_time": 0.8710079193115234,
+      "timestamp": "2024-12-16T20:58:01.622804"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/Services/X-ray-Imaging/": {
+      "load_time": 1.1561388969421387,
+      "timestamp": "2024-12-16T20:58:02.816007"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/services/x-ray-imaging/#main-content": {
+      "load_time": 0.9074087142944336,
+      "timestamp": "2024-12-16T20:58:03.762281"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/Services/Work-Related-Medical/": {
+      "load_time": 1.2642138004302979,
+      "timestamp": "2024-12-16T20:58:05.051105"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/services/work-related-medical/#main-content": {
+      "load_time": 0.9227759838104248,
+      "timestamp": "2024-12-16T20:58:06.001266"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/privacy-policy/": {
+      "load_time": 0.9630990028381348,
+      "timestamp": "2024-12-16T20:58:07.012184"
+    },
+    "https://urgentcaretwinfallscom.netlify.app/privacy-policy/#main-content": {
+      "load_time": 0.8996806144714355,
+      "timestamp": "2024-12-16T20:58:07.956925"
+    }
+  }
+}

@@ -10,4 +10,21 @@ export default defineConfig({
   integrations: [mdx(), icon(), tailwind({
     applyBaseStyles: false,
   }), compress()],
+  output: 'static',
+  build: {
+    assets: true,
+    inlineStylesheets: 'auto'
+  },
+  vite: {
+    build: {
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor': ['./src/scripts/vendor.js']
+          }
+        }
+      }
+    }
+  }
 })

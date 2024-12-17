@@ -1,0 +1,35 @@
+// Spacing
+$radius-small: 3px !default;
+$radius-large: 6px !default;
+$gap-default: 2rem !default;
+$font-measure: 70ch !default;
+
+// Typography
+$font-family-default: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !default;
+$font-family-special: $font-family-default !default;
+
+// Colors - Light Theme
+$font-color-light: #111827 !default;
+$action-color-light: #1890ff !default;
+$action-color-state-light: #096dd9 !default;
+$background-light: #ffffff !default;
+$primary-background-light: #e6f7ff !default;
+$neutral-background-light: #f3f4f6 !default;
+
+// Colors - Dark Theme
+$font-color-dark: #f3f4f6 !default;
+$action-color-dark: #40a9ff !default;
+$action-color-state-dark: #1890ff !default;
+$background-dark: #111827 !default;
+$primary-background-dark: #096dd9 !default;
+$neutral-background-dark: #1f2937 !default;
+
+// Export variables
+:export {
+  radiusSmall: $radius-small;
+  radiusLarge: $radius-large;
+  gapDefault: $gap-default;
+  fontMeasure: $font-measure;
+  fontFamilyDefault: $font-family-default;
+  fontFamilySpecial: $font-family-special;
+}

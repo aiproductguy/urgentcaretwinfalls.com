@@ -1,0 +1,80 @@
+2024-12-16 21:36:45,178 - __main__ - INFO - Starting analysis at 2024-12-16T21:36:45.178309
+2024-12-16 21:36:45,178 - __main__ - INFO - Initialized WebsiteFeedbackAgent for https://urgentcaretwinfallscom.netlify.app
+2024-12-16 21:36:45,178 - __main__ - INFO - Performance monitoring initialized
+2024-12-16 21:36:45,178 - __main__ - INFO - Starting website analysis
+2024-12-16 21:36:45,861 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app
+2024-12-16 21:36:48,231 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app: 2.37s
+2024-12-16 21:36:48,261 - __main__ - INFO - Found 21 internal links on https://urgentcaretwinfallscom.netlify.app
+2024-12-16 21:36:48,269 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/#main-content
+2024-12-16 21:36:49,365 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/#main-content: 1.10s
+2024-12-16 21:36:49,396 - __main__ - INFO - Found 21 internal links on https://urgentcaretwinfallscom.netlify.app/#main-content
+2024-12-16 21:36:49,404 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/
+2024-12-16 21:36:50,580 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/: 1.18s
+2024-12-16 21:36:50,601 - __main__ - INFO - Found 21 internal links on https://urgentcaretwinfallscom.netlify.app/
+2024-12-16 21:36:50,606 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/#location
+2024-12-16 21:36:52,659 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/#location: 2.05s
+2024-12-16 21:36:52,686 - __main__ - INFO - Found 21 internal links on https://urgentcaretwinfallscom.netlify.app/#location
+2024-12-16 21:36:52,693 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/team/
+2024-12-16 21:36:53,598 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/team/: 0.90s
+2024-12-16 21:36:53,627 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/team/
+2024-12-16 21:36:53,632 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/team/#main-content
+2024-12-16 21:36:54,490 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/team/#main-content: 0.86s
+2024-12-16 21:36:54,521 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/team/#main-content
+2024-12-16 21:36:54,527 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/Services/Injuries/
+2024-12-16 21:36:55,678 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/Services/Injuries/: 1.15s
+2024-12-16 21:36:55,691 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/Services/Injuries/
+2024-12-16 21:36:55,694 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/services/injuries/#main-content
+2024-12-16 21:36:56,570 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/services/injuries/#main-content: 0.88s
+2024-12-16 21:36:56,601 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/services/injuries/#main-content
+2024-12-16 21:36:56,605 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/Services/Illnesses/
+2024-12-16 21:36:57,829 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/Services/Illnesses/: 1.22s
+2024-12-16 21:36:57,854 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/Services/Illnesses/
+2024-12-16 21:36:57,859 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/services/illnesses/#main-content
+2024-12-16 21:36:58,720 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/services/illnesses/#main-content: 0.86s
+2024-12-16 21:36:58,746 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/services/illnesses/#main-content
+2024-12-16 21:36:58,752 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/Services/Diagnostics/
+2024-12-16 21:36:59,887 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/Services/Diagnostics/: 1.13s
+2024-12-16 21:36:59,923 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/Services/Diagnostics/
+2024-12-16 21:36:59,928 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/services/diagnostics/#main-content
+2024-12-16 21:37:00,814 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/services/diagnostics/#main-content: 0.89s
+2024-12-16 21:37:00,842 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/services/diagnostics/#main-content
+2024-12-16 21:37:00,847 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/Services/Physicals-Wellness-Checkups/
+2024-12-16 21:37:01,964 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/Services/Physicals-Wellness-Checkups/: 1.12s
+2024-12-16 21:37:01,998 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/Services/Physicals-Wellness-Checkups/
+2024-12-16 21:37:02,004 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/services/physicals-wellness-checkups/#main-content
+2024-12-16 21:37:02,950 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/services/physicals-wellness-checkups/#main-content: 0.95s
+2024-12-16 21:37:02,973 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/services/physicals-wellness-checkups/#main-content
+2024-12-16 21:37:02,977 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/Services/X-ray-Imaging/
+2024-12-16 21:37:04,042 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/Services/X-ray-Imaging/: 1.07s
+2024-12-16 21:37:04,077 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/Services/X-ray-Imaging/
+2024-12-16 21:37:04,084 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/services/x-ray-imaging/#main-content
+2024-12-16 21:37:05,002 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/services/x-ray-imaging/#main-content: 0.92s
+2024-12-16 21:37:05,033 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/services/x-ray-imaging/#main-content
+2024-12-16 21:37:05,039 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/Services/Work-Related-Medical/
+2024-12-16 21:37:06,081 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/Services/Work-Related-Medical/: 1.04s
+2024-12-16 21:37:06,115 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/Services/Work-Related-Medical/
+2024-12-16 21:37:06,121 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/services/work-related-medical/#main-content
+2024-12-16 21:37:07,036 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/services/work-related-medical/#main-content: 0.92s
+2024-12-16 21:37:07,070 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/services/work-related-medical/#main-content
+2024-12-16 21:37:07,075 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/privacy-policy/
+2024-12-16 21:37:08,072 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/privacy-policy/: 1.00s
+2024-12-16 21:37:08,096 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/privacy-policy/
+2024-12-16 21:37:08,101 - __main__ - INFO - Analyzing page: https://urgentcaretwinfallscom.netlify.app/privacy-policy/#main-content
+2024-12-16 21:37:09,008 - __main__ - INFO - Page load time for https://urgentcaretwinfallscom.netlify.app/privacy-policy/#main-content: 0.91s
+2024-12-16 21:37:09,034 - __main__ - INFO - Found 20 internal links on https://urgentcaretwinfallscom.netlify.app/privacy-policy/#main-content
+2024-12-16 21:37:09,043 - __main__ - INFO - Saved data to cache for https://urgentcaretwinfallscom.netlify.app
+2024-12-16 21:37:09,043 - __main__ - INFO - Generating feedback report
+2024-12-16 21:37:09,044 - __main__ - INFO - Feedback report generated successfully
+2024-12-16 21:37:09,044 - __main__ - INFO - Feedback saved to .cache/2024-12-16-feedback.json
+2024-12-16 21:37:09,044 - __main__ - INFO - Analysis Summary:
+2024-12-16 21:37:09,044 - __main__ - INFO - - Pages analyzed: 20
+2024-12-16 21:37:09,044 - __main__ - INFO - - Content coverage: 62.5%
+2024-12-16 21:37:09,044 - __main__ - INFO - - Missing services: treating illnesses, minor injuries, x-rays
+2024-12-16 21:37:09,044 - __main__ - INFO - Markdown feedback saved to .cache/2024-12-16-2137-feedback.md
+2024-12-16 21:37:09,044 - __main__ - INFO - Website analysis completed successfully
+2024-12-16 21:37:09,045 - __main__ - INFO - Performance Summary:
+2024-12-16 21:37:09,045 - __main__ - INFO - - Total runtime: 23.87s
+2024-12-16 21:37:09,045 - __main__ - INFO - - Average page latency: 1.12s
+2024-12-16 21:37:09,045 - __main__ - INFO - - Pages analyzed: 20
+2024-12-16 21:37:09,069 - __main__ - INFO - Browser session closed
+2024-12-16 21:37:09,069 - __main__ - INFO - Total execution time: 23.89s

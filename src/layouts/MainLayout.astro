@@ -1,0 +1,26 @@
+---
+// Base layout component
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | Urgent Care Twin Falls</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html> 
