@@ -6,7 +6,7 @@
           <NuxtLink to="/" class="flex items-center gap-2">
             <img src="/images/logo-heart.svg" alt="Urgent Care of Twin Falls" width="47" height="37" />
             <span class="text-xl font-bold text-primary-500">Urgent Care</span>
-            <span class="text-gray-600 dark:text-gray-300">Twin Falls</span>
+            <span class="text-gray-600 dark:text-gray-300">of Twin Falls</span>
           </NuxtLink>
           <DarkModeToggle />
         </div>
