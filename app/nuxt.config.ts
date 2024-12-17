@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: '/urgentcaretwinfalls.com/',
+    baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
     buildAssetsDir: 'assets',
     head: {
       title: 'Urgent Care of Twin Falls',
