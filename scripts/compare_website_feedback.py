@@ -311,15 +311,25 @@ class WebsiteComparator:
             logger.error(f"Error saving comparison report: {str(e)}", exc_info=True)
 
 async def main():
-    original_url = "https://urgentcaretwinfallscom.netlify.app"
-    new_url = "http://localhost:3000"
+    netlify_url = "https://urgentcaretwinfallscom.netlify.app"
+    github_url = "https://aiproductguy.github.io/urgentcaretwinfalls.com/"
     
     try:
-        comparator = WebsiteComparator(original_url, new_url)
+        logger.info(f"Starting comparison between:\n- {netlify_url}\n- {github_url}")
+        
+        comparator = WebsiteComparator(netlify_url, github_url)
         feedback1, feedback2 = await comparator.analyze_both_sites()
         report = comparator.generate_comparison_report(feedback1, feedback2)
         comparator.save_comparison_report(report)
+        
         logger.info("Comparison completed successfully")
+        
+        # Print summary to console
+        print("\nComparison Summary:")
+        print(f"Original Site: {netlify_url}")
+        print(f"New Site: {github_url}")
+        print(f"Report saved to: .cache/{datetime.now().strftime('%Y%m%d-%H%M')}-compare.md")
+        
     except Exception as e:
         logger.error(f"Error during comparison: {str(e)}", exc_info=True)
         raise

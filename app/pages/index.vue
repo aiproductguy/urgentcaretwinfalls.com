@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
     <main class="container mx-auto px-4">
       <!-- Hero Section -->
-      <section class="hero my-24">
+      <section class="hero my-24 relative">
         <div class="container">
           <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
             <div class="flex flex-col items-center gap-8 md:items-start">
@@ -13,14 +13,23 @@
                 Providing compassionate and efficient care when you need it most. Visit us today or call (208) 733-6700 for immediate assistance.
                 <i>(Formerly Falls Avenue Immediate Care)</i>
               </p>
-              <div class="flex flex-col gap-3 min-[500px]:flex-row">
+              <div class="flex flex-col gap-3 min-[500px]:flex-row items-center">
                 <a class="button primary flex items-center justify-center gap-2" href="tel:2087336700">
                   <Icon icon="mdi:phone" />Call Now
                 </a>
                 <a class="button secondary flex items-center justify-center gap-2" href="#location">
                   <Icon icon="mdi:map-marker" />Get Directions
                 </a>
-                <img class="floatingImg" src="/best-award-2023.png" width="150px" alt="Winners badge 2022 Idahos best Statewide winner">
+                <!-- Awards Section -->
+                <div class="awards-container flex gap-2 ml-4">
+                  <img 
+                    src="/best-award-2023.png" 
+                    width="100" 
+                    height="100"
+                    alt="Idaho's Best 2023 Statewide Winner" 
+                    class="award-badge"
+                  />
+                </div>
               </div>
             </div>
             <img class="hidden lg:block" src="/location-front.png" alt="Urgent Care of Twin Falls Facility" decoding="async" />
@@ -179,8 +188,13 @@ useHead({
   @apply bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600;
 }
 
-.floatingImg {
-  @apply absolute -top-20 right-0 md:right-20 animate-bounce;
+.award-badge {
+  @apply transition-transform duration-300 hover:scale-110;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.awards-container {
+  @apply justify-center sm:justify-start;
 }
 
 :root {
