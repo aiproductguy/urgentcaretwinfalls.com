@@ -27,7 +27,8 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
-    buildAssetsDir: 'assets',
+    buildAssetsDir: '_nuxt',
+    cdnURL: process.env.GITHUB_ACTIONS ? 'https://aiproductguy.github.io/urgentcaretwinfalls.com' : '',
     head: {
       title: 'Urgent Care of Twin Falls',
       meta: [
@@ -68,7 +69,8 @@ export default defineNuxtConfig({
         '@vueuse/core',
         '@vueuse/shared'
       ]
-    }
+    },
+    base: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/'
   },
 
   content: {
