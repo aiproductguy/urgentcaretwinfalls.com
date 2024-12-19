@@ -51,13 +51,24 @@ jobs:
           static_site_generator: nuxt
       
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          if [ ! -f "pnpm-lock.yaml" ]; then
+            echo "No lockfile found, installing dependencies without frozen-lockfile"
+            pnpm install
+          else
+            echo "Lockfile found, installing with frozen-lockfile"
+            pnpm install --frozen-lockfile
+          fi
       
       - name: Build
         run: pnpm run build
+        env:
+          NITRO_PRESET: github_pages
       
       - name: Generate static files
         run: pnpm run generate
+        env:
+          NITRO_PRESET: github_pages
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
