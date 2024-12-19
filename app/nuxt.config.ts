@@ -75,10 +75,11 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'github-dark'
     },
-    api: {
-      baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/api/_content' : '/api/_content'
-    },
-    documentDriven: true
+    documentDriven: true,
+    markdown: {
+      remarkPlugins: ['remark-gfm'],
+      rehypePlugins: ['rehype-external-links']
+    }
   },
 
   nitro: {

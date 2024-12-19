@@ -30,6 +30,8 @@
     "prettier": "^2.8.3",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.2.2",
+    "rehype-external-links": "^3.0.0",
+    "remark-gfm": "^4.0.0",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.0",
     "svgo": "^3.2.0",
