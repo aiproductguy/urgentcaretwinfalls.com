@@ -1,19 +1,32 @@
 <template>
   <main class="container mx-auto px-4 py-24">
-    <div v-if="service" class="mx-auto max-w-4xl">
-      <!-- Service Header -->
+    <!-- Loading state -->
+    <div v-if="pending" class="flex justify-center">
+      <div class="animate-spin h-8 w-8 border-4 border-blue-600 rounded-full border-t-transparent"></div>
+    </div>
+
+    <!-- Error state -->
+    <div v-else-if="error" class="text-center text-red-600">
+      <p>Sorry, this service could not be found.</p>
+      <NuxtLink to="/services" class="mt-4 text-blue-600 hover:text-blue-700">
+        Return to Services
+      </NuxtLink>
+    </div>
+
+    <!-- Content state -->
+    <div v-else-if="data" class="mx-auto max-w-4xl">
       <header class="mb-16 text-center">
         <NuxtLink to="/services" class="mb-8 inline-flex items-center text-blue-600 hover:text-blue-700">
           <Icon icon="mdi:arrow-left" class="mr-2" />
           Back to Services
         </NuxtLink>
-        <h1 class="text-gradient mb-6 text-5xl font-bold">{{ service.title }}</h1>
-        <p class="text-xl text-gray-600 dark:text-gray-300">{{ service.description }}</p>
+        <h1 class="text-gradient mb-6 text-5xl font-bold">{{ data.title }}</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">{{ data.description }}</p>
       </header>
 
       <!-- Service Content -->
       <div class="prose prose-lg mx-auto dark:prose-invert">
-        <ContentDoc :path="`/services/${route.params.slug}`" />
+        <ContentRenderer :value="data" />
       </div>
 
       <!-- Call to Action -->
@@ -36,44 +49,27 @@
 import { Icon } from '@iconify/vue'
 
 const route = useRoute()
-const services = {
-  'minor-injuries': {
-    title: 'Minor Injuries',
-    description: 'Expert care for sprains, fractures, cuts, burns, and other non-life-threatening injuries.'
-  },
-  'illness-treatment': {
-    title: 'Illness Treatment',
-    description: 'Treatment for common illnesses including cold, flu, infections, and other acute conditions.'
-  },
-  diagnostic: {
-    title: 'Diagnostic Services',
-    description: 'Comprehensive diagnostic testing including lab work, strep tests, and more.'
-  },
-  physicals: {
-    title: 'Physicals & Checkups',
-    description: 'School physicals, sports physicals, and general wellness checkups for all ages.'
-  },
-  xray: {
-    title: 'X-ray & Imaging',
-    description: 'On-site X-ray services and imaging for accurate diagnosis of injuries and conditions.'
-  },
-  'work-medical': {
-    title: 'Work-Related Medical',
-    description: 'Work-related medical services including pre-employment screenings and injury care.'
-  }
-}
 
-const service = services[route.params.slug]
+// Fetch content using Nuxt Content module
+const { data, pending, error } = await useAsyncData(
+  `service-${route.params.slug}`,
+  () => queryContent('services').where({ _path: `/services/${route.params.slug}` }).findOne()
+)
 
-useHead({
-  title: `${service?.title || 'Service'} | Twin Falls Urgent Care`,
+// Set up meta tags using the content data
+useHead(() => ({
+  title: data.value ? `${data.value.title} | Twin Falls Urgent Care` : 'Service | Twin Falls Urgent Care',
   meta: [
     {
       name: 'description',
-      content: service?.description || 'Medical services provided by Twin Falls Urgent Care'
+      content: data.value?.description || 'Medical services provided by Twin Falls Urgent Care'
+    },
+    {
+      name: 'keywords',
+      content: data.value?.keywords || ''
     }
   ]
-})
+}))
 </script>
 
 <style scoped>
