@@ -51,14 +51,7 @@ jobs:
           static_site_generator: nuxt
       
       - name: Install dependencies
-        run: |
-          if [ ! -f "pnpm-lock.yaml" ]; then
-            echo "No lockfile found, installing dependencies without frozen-lockfile"
-            pnpm install
-          else
-            echo "Lockfile found, installing with frozen-lockfile"
-            pnpm install --frozen-lockfile
-          fi
+        run: pnpm install --no-frozen-lockfile
       
       - name: Build
         run: pnpm run build
