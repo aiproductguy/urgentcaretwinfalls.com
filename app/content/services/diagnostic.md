@@ -17,8 +17,6 @@ Our state-of-the-art diagnostic services help provide accurate and timely diagno
 - **Urinalysis**
 - **Blood Glucose Testing**
 - **Pregnancy Testing**
-- **Basic Metabolic Panel**
-- **Complete Blood Count (CBC)**
 
 ## Why Choose Our Diagnostic Services?
 
