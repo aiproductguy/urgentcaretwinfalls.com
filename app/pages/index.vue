@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+  <NuxtLayout>
     <main class="container mx-auto px-4">
       <!-- Hero Section -->
       <section class="hero my-24 relative">
@@ -32,7 +32,7 @@
                 </div>
               </div>
             </div>
-            <img class="hidden lg:block" src="/location-front.png" alt="Urgent Care of Twin Falls Facility" decoding="async" />
+            <img class="hidden lg:block rounded-lg shadow-xl" src="/location-front.png" alt="Urgent Care of Twin Falls Facility" decoding="async" />
           </div>
         </div>
       </section>
@@ -116,7 +116,7 @@
         </div>
       </section>
     </main>
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup>
@@ -165,6 +165,10 @@ useHead({
       })
     }
   ]
+})
+
+definePageMeta({
+  layout: 'default'
 })
 </script>
 

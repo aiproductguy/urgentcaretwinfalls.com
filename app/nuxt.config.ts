@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxt/image',
     '@nuxtjs/color-mode'
@@ -27,8 +26,7 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
-    buildAssetsDir: '_nuxt',
-    cdnURL: process.env.GITHUB_ACTIONS ? 'https://aiproductguy.github.io/urgentcaretwinfalls.com' : '',
+    buildAssetsDir: 'assets',
     head: {
       title: 'Urgent Care of Twin Falls',
       meta: [
@@ -54,65 +52,75 @@ export default defineNuxtConfig({
   ],
 
   vite: {
-    css: {
-      modules: {
-        localsConvention: 'camelCase'
+    base: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
+    build: {
+      assetsDir: 'assets',
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name].[hash][extname]',
+          chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js'
+        }
       }
     },
-    esbuild: {
-      supported: {
-        'top-level-await': true
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost'
       }
-    },
-    optimizeDeps: {
-      include: [
-        '@vueuse/core',
-        '@vueuse/shared'
-      ]
-    },
-    base: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/'
-  },
-
-  content: {
-    highlight: {
-      theme: 'github-dark'
-    },
-    documentDriven: true,
-    markdown: {
-      remarkPlugins: ['remark-gfm'],
-      rehypePlugins: ['rehype-external-links']
     }
   },
 
   nitro: {
-    preset: 'github-pages',
-    static: true,
-    prerender: {
-      crawlLinks: true,
-      routes: [
-        '/services/minor-injuries',
-        '/services/illness-treatment',
-        '/services/work-medical',
-        '/services/diagnostic',
-        '/services/xray',
-        '/services/physicals',
-        '/services/illnesses'
-      ]
-    },
-    routeRules: {
-      '/**': {
-        headers: {
-          'Cross-Origin-Embedder-Policy': 'unsafe-none',
-          'Cross-Origin-Opener-Policy': 'unsafe-none',
-          'Cross-Origin-Resource-Policy': 'cross-origin'
-        }
+    preset: process.env.GITHUB_ACTIONS ? 'github-pages' : 'node-server',
+    static: true
+  },
+
+  routeRules: {
+    '/**': {
+      headers: {
+        'Cross-Origin-Embedder-Policy': 'unsafe-none',
+        'Cross-Origin-Opener-Policy': 'unsafe-none',
+        'Cross-Origin-Resource-Policy': 'cross-origin'
       }
     }
   },
 
-  compatibilityDate: '2024-12-18',
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
+      contact: {
+        address: {
+          street: '260 Falls Avenue, Suite C',
+          city: 'Twin Falls',
+          state: 'ID',
+          zip: '83301'
+        },
+        phone: '(208) 555-5555',
+        email: 'info@urgentcaretwinfalls.com',
+        googleMapsUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.9623927753546!2d-114.47637859999999!3d42.5773207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aca2457605db65%3A0x24920c41025270b7!2s260%20Falls%20Ave%2C%20Twin%20Falls%2C%20ID%2083301!5e0!3m2!1sen!2sus!4v1726347046896!5m2!1sen!2sus'
+      },
+      hours: {
+        weekdays: {
+          open: '8:00 AM',
+          close: '5:00 PM'
+        },
+        weekend: 'Closed',
+        holidays: 'Closed on major holidays',
+        shortSchedule: '8:00 AM - 5:00 PM M-F',
+        longSchedule: [
+          'Monday - Friday: 8:00 AM - 5:00 PM',
+          'Saturday - Sunday: Closed'
+        ]
+      }
+    }
+  },
+
   ssr: false,
+
   experimental: {
     payloadExtraction: false
-  }
+  },
+
+  compatibilityDate: '2025-01-14'
 })

@@ -5,24 +5,27 @@
         <div>
           <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white">Contact Us</h3>
           <address class="not-italic text-gray-600 dark:text-gray-300">
-            <p>260 Falls Avenue, Suite C</p>
-            <p>Twin Falls, ID 83301</p>
+            <p>{{ contact.address.street }}</p>
+            <p>{{ contact.address.city }}, {{ contact.address.state }} {{ contact.address.zip }}</p>
             <p class="mt-2">
-              <a href="tel:+12087336700" class="hover:text-primary-500">
-                (208) 733-6700
+              <a :href="'tel:' + contact.phone.replace(/\D/g, '')" class="hover:text-primary-500">
+                {{ contact.phone }}
               </a>
             </p>
             <p class="mt-2">
-              <a href="mailto:info@urgentcaretwinfalls.com" class="hover:text-primary-500">
-                info@urgentcaretwinfalls.com
+              <a :href="'mailto:' + contact.email" class="hover:text-primary-500">
+                {{ contact.email }}
               </a>
             </p>
           </address>
           <div class="mt-6">
             <h4 class="font-bold text-base mb-2 text-gray-900 dark:text-white">Hours</h4>
             <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
-              <li class="text-sm italic">Closed on weekends and major holidays</li>
+              <li>{{ hours.shortSchedule }}</li>
+              <li class="text-sm italic">{{ hours.holidays }}</li>
+              <li class="text-sm" :class="isOpen() ? 'text-green-600' : 'text-red-600'">
+                Currently {{ isOpen() ? 'Open' : 'Closed' }}
+              </li>
             </ul>
           </div>
         </div>
@@ -30,11 +33,11 @@
           <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white">Services</h3>
           <ul class="space-y-2 text-gray-600 dark:text-gray-300">
             <li><NuxtLink to="/services/minor-injuries" class="hover:text-primary-500">Minor Injuries</NuxtLink></li>
-            <li><NuxtLink to="/services/illness-treatment" class="hover:text-primary-500">Illness Treatment</NuxtLink></li>
-            <li><NuxtLink to="/services/diagnostic" class="hover:text-primary-500">Diagnostic Services</NuxtLink></li>
-            <li><NuxtLink to="/services/physicals" class="hover:text-primary-500">Physicals & Wellness</NuxtLink></li>
-            <li><NuxtLink to="/services/xray" class="hover:text-primary-500">X-Ray & Imaging</NuxtLink></li>
-            <li><NuxtLink to="/services/work-medical" class="hover:text-primary-500">Work-Related Medical</NuxtLink></li>
+            <li><NuxtLink to="/services/treating-illnesses" class="hover:text-primary-500">Illness Treatment</NuxtLink></li>
+            <li><NuxtLink to="/services/diagnostic-services" class="hover:text-primary-500">Diagnostic Services</NuxtLink></li>
+            <li><NuxtLink to="/services/physicals-wellness" class="hover:text-primary-500">Physicals & Wellness</NuxtLink></li>
+            <li><NuxtLink to="/services/xray-imaging" class="hover:text-primary-500">X-Ray & Imaging</NuxtLink></li>
+            <li><NuxtLink to="/services/work-related" class="hover:text-primary-500">Work-Related Medical</NuxtLink></li>
           </ul>
         </div>
         <div>
@@ -79,6 +82,8 @@
 
 <script setup>
 import { Icon as IconifyIcon } from '@iconify/vue'
+
+const { contact, hours, isOpen } = useClinicInfo()
 </script>
 
 <style scoped>
