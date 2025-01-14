@@ -4,12 +4,12 @@
 
 <script setup>
 useHead({
-  titleTemplate: '%s | Urgent Care of Twin Falls',
+  titleTemplate: '%s | Urgent Care Twin Falls',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { 
       name: 'description', 
-      content: 'Urgent Care of Twin Falls offers prompt, compassionate medical care for non-life-threatening illnesses and injuries in Twin Falls, Idaho.'
+      content: 'Urgent Care Twin Falls offers prompt, compassionate medical care for non-life-threatening illnesses and injuries in Twin Falls, Idaho.'
     }
   ],
   link: [

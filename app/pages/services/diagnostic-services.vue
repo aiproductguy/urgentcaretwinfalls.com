@@ -90,7 +90,6 @@
 
       <h2>Why Choose Our Diagnostic Services</h2>
       <ul>
-        <li>On-site laboratory facilities</li>
         <li>Fast result turnaround</li>
         <li>Experienced lab technicians</li>
         <li>Comprehensive testing options</li>
@@ -115,7 +114,7 @@
       <h2>Get Tested Today</h2>
       <p>
         Need diagnostic testing? Walk in today or call 
-        <a href="tel:+12087336700">(208) 733-6700</a> for immediate service. 
+        <a :href="`tel:${contact.phone.replace(/\D/g, '')}`">{{ contact.phone }}</a> for immediate service. 
         Our diagnostic team is ready to provide you with fast, accurate results.
       </p>
 
@@ -155,6 +154,8 @@
 <script setup>
 import { Icon } from '@iconify/vue'
 import ServicePage from '@/components/ServicePage.vue'
+
+const { contact } = useClinicInfo()
 
 definePageMeta({
   layout: 'default'

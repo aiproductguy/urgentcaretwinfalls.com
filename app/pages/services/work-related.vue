@@ -3,7 +3,7 @@
     <ServicePage
       title="Work-Related Medical Services at Twin Falls Urgent Care"
       description="Comprehensive occupational health services including work injuries, physicals, and drug screening at Twin Falls Urgent Care."
-      keywords="occupational health, work injury, workers comp, drug testing, DOT physical, employment physical"
+      keywords="occupational health, work injury, workers comp, DOT physical, employment physical"
       image="/images/work-related.jpg"
     >
       <p class="lead">
@@ -30,16 +30,6 @@
             <li>DOT/CDL physicals</li>
             <li>Fitness for duty exams</li>
             <li>Return to work clearance</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Drug & Alcohol Testing</strong>
-          <ul>
-            <li>DOT drug screening</li>
-            <li>Random drug testing</li>
-            <li>Post-accident testing</li>
-            <li>Breath alcohol testing</li>
           </ul>
         </li>
 
@@ -113,7 +103,7 @@
       <h2>Schedule Services</h2>
       <p>
         Need occupational health services? Walk in today or call 
-        <a href="tel:+12087336700">(208) 733-6700</a> to schedule. 
+        <a :href="`tel:${contact.phone.replace(/\D/g, '')}`">{{ contact.phone }}</a> to schedule. 
         We're ready to help maintain a healthy, productive workplace.
       </p>
     </ServicePage>
@@ -122,6 +112,8 @@
 
 <script setup>
 import ServicePage from '@/components/ServicePage.vue'
+
+const { contact } = useClinicInfo()
 
 definePageMeta({
   layout: 'default'

@@ -53,14 +53,14 @@
 </template>
 
 <script setup>
-const { googleMapsUrl } = useClinicInfo()
+const { contact, googleMapsUrl } = useClinicInfo()
 
 useHead({
-  title: 'Location | Urgent Care of Twin Falls',
+  title: 'Location | Urgent Care Twin Falls',
   meta: [
     {
       name: 'description',
-      content: 'Visit us at 260 Falls Avenue, Twin Falls, Idaho. Open Monday through Friday, 8:00 AM - 5:00 PM. Call (208) 733-6700 for appointments or walk in today.'
+      content: `Visit us at 260 Falls Avenue Suite D, Twin Falls, Idaho. Open Monday through Friday, 8:00 AM - 5:00 PM. Call ${contact.phone} for appointments or walk in today.`
     }
   ]
 })

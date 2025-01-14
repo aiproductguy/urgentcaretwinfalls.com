@@ -7,14 +7,14 @@
           <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
             <div class="flex flex-col items-center gap-8 md:items-start">
               <h1 class="text-center text-4xl md:text-left lg:text-8xl">
-                <span class="text-gradient">Urgent Care</span> <span class="text-4xl">of</span> Twin Falls
+                <span class="text-gradient">Urgent Care</span> Twin Falls
               </h1>
               <p class="text-xl text-center md:text-left">
-                Providing compassionate and efficient care when you need it most. Visit us today or call (208) 733-6700 for immediate assistance.
-                <i>(Formerly Falls Avenue Immediate Care)</i>
+                Providing compassionate and efficient care when you need it most. Visit us today or call {{ contact.phone }} for immediate assistance.
+                <i style="color: orange;">(Formerly Falls Avenue Immediate Care)</i>
               </p>
               <div class="flex flex-col gap-3 min-[500px]:flex-row items-center">
-                <a class="button primary flex items-center justify-center gap-2" href="tel:2087336700">
+                <a class="button primary flex items-center justify-center gap-2" :href="`tel:${contact.phone.replace(/\D/g, '')}`">
                   <Icon icon="mdi:phone" />Call Now
                 </a>
                 <a class="button secondary flex items-center justify-center gap-2" href="#location">
@@ -23,16 +23,16 @@
                 <!-- Awards Section -->
                 <div class="awards-container flex gap-2 ml-4">
                   <img 
-                    src="/best-award-2023.png" 
+                    src="/REG-Central-IdahosBest2022-1280w.png"
                     width="100" 
                     height="100"
-                    alt="Idaho's Best 2023 Statewide Winner" 
+                    alt="Idaho's Best Award Winner" 
                     class="award-badge"
                   />
                 </div>
               </div>
             </div>
-            <img class="hidden lg:block rounded-lg shadow-xl" src="/location-front.png" alt="Urgent Care of Twin Falls Facility" decoding="async" />
+            <img class="hidden lg:block rounded-lg shadow-xl" src="/location-front.png" alt="Urgent Care Twin Falls Facility" decoding="async" />
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@
             <div>
               <h2 class="text-4xl mb-8">Meet Our Caring Team</h2>
               <p class="text-2xl">
-                Led by Dr. David Christensen and Chuck Davis, our team is dedicated to providing expert and compassionate care.
+                Led by Dr. David Christensen and Chuck Fuller PA, our team is dedicated to providing expert and compassionate care.
               </p>
             </div>
             <img src="/Dr-DC-with-Patient.png" alt="Dr. David Christensen with Patient" class="rounded-lg shadow-xl" />
@@ -105,16 +105,10 @@
 
       <!-- Why Choose Us Section -->
       <section class="mb-32 mt-64">
-        <div class="container">
-          <h2 class="mb-16 text-6xl">Why Choose Us?</h2>
-          <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-            <Counter count="15+" title="Years of Experience" sub="Trusted Healthcare" />
-            <Counter count="Original" title="Local Legacy" sub="First Urgent Care in Twin Falls" />
-            <Counter count="Mon-Fri" title="Availability" sub="8am-5pm Walk-ins & Appointments" />
-            <Counter count="High" title="Satisfaction Rate" sub="Patient Feedback" />
-          </div>
-        </div>
+        <WhyChooseUs />
       </section>
+
+      <!-- Main content end -->
     </main>
   </NuxtLayout>
 </template>
@@ -123,6 +117,9 @@
 import { Icon } from '@iconify/vue'
 import Feature from '~/components/Feature.vue'
 import Counter from '~/components/Counter.vue'
+import WhyChooseUs from '~/components/WhyChooseUs.vue'
+
+const { contact } = useClinicInfo()
 
 useHead({
   title: 'Twin Falls Urgent Care - Quick & Professional Medical Care',
@@ -144,7 +141,7 @@ useHead({
         "@type": "MedicalOrganization",
         "name": "Twin Falls Urgent Care",
         "url": "https://urgentcaretwinfallscom.netlify.app",
-        "telephone": "+1-208-733-6700",
+        "telephone": `+1-${contact.phone.replace(/\D/g, '')}`,
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "260 Falls Avenue",

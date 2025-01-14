@@ -28,13 +28,13 @@ export default defineNuxtConfig({
     baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
     buildAssetsDir: 'assets',
     head: {
-      title: 'Urgent Care of Twin Falls',
+      title: 'Urgent Care Twin Falls',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { 
           name: 'description', 
-          content: 'Urgent Care of Twin Falls offers prompt, compassionate medical care for non-life-threatening illnesses and injuries in Twin Falls, Idaho.'
+          content: 'Urgent Care Twin Falls offers prompt, compassionate medical care for non-life-threatening illnesses and injuries in Twin Falls, Idaho.'
         }
       ],
       link: [
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
       baseURL: process.env.GITHUB_ACTIONS ? '/urgentcaretwinfalls.com/' : '/',
       contact: {
         address: {
-          street: '260 Falls Avenue, Suite C',
+          street: '260 Falls Avenue, Suite D',
           city: 'Twin Falls',
           state: 'ID',
           zip: '83301'

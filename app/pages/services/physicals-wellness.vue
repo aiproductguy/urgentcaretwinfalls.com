@@ -112,7 +112,7 @@
       <h2>Schedule Your Physical</h2>
       <p>
         Stay on top of your health. Walk in today or call 
-        <a href="tel:+12087336700">(208) 733-6700</a> to schedule your physical. 
+        <a :href="`tel:${contact.phone.replace(/\D/g, '')}`">{{ contact.phone }}</a> to schedule your physical. 
         Our team is ready to help you maintain optimal health and wellness.
       </p>
     </ServicePage>
@@ -121,6 +121,8 @@
 
 <script setup>
 import ServicePage from '@/components/ServicePage.vue'
+
+const { contact } = useClinicInfo()
 
 definePageMeta({
   layout: 'default'

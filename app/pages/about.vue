@@ -4,7 +4,7 @@
       <div class="text-center">
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">About Us</h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
-          Your Trusted Partner in Health – Urgent Care of Twin Falls
+          Your Trusted Partner in Health – Urgent Care Twin Falls
         </p>
       </div>
 
@@ -13,7 +13,7 @@
         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
         <div class="prose prose-blue dark:prose-invert max-w-none">
           <p class="text-lg text-gray-600 dark:text-gray-300">
-            At Urgent Care of Twin Falls, we know that when life throws you a curveball with sudden illness or injury, 
+            At Urgent Care Twin Falls, we know that when life throws you a curveball with sudden illness or injury, 
             quick and reliable care makes all the difference. That's why we're here to provide the high-quality, 
             compassionate care you deserve, right here in your community.
           </p>
@@ -89,11 +89,11 @@
 import { Icon } from '@iconify/vue'
 
 useHead({
-  title: 'About Us | Urgent Care of Twin Falls',
+  title: 'About Us | Urgent Care Twin Falls',
   meta: [
     {
       name: 'description',
-      content: 'Learn about our experienced medical team at Urgent Care of Twin Falls. Led by Dr. David Christensen, we provide compassionate, expert care when you need it most.'
+      content: 'Learn about our experienced medical team at Urgent Care Twin Falls. Led by Dr. David Christensen, we provide compassionate, expert care when you need it most.'
     }
   ]
 })

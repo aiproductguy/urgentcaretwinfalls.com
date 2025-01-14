@@ -92,7 +92,6 @@
         <li>You need immediate care but it's not life-threatening</li>
         <li>Your primary care physician isn't available</li>
         <li>You want to avoid expensive emergency room visits</li>
-        <li>You need after-hours care for injuries</li>
       </ul>
 
       <h2>When to Seek Emergency Care</h2>
@@ -114,7 +113,7 @@
       <h2>Get Care Now</h2>
       <p>
         Don't let minor injuries become major problems. Walk in today or call 
-        <a href="tel:+12087336700">(208) 733-6700</a> for immediate assistance. 
+        <a :href="`tel:${contact.phone.replace(/\D/g, '')}`">{{ contact.phone }}</a> for immediate assistance. 
         Our experienced team is ready to help you recover quickly and safely.
       </p>
     </ServicePage>
@@ -123,6 +122,8 @@
 
 <script setup>
 import ServicePage from '@/components/ServicePage.vue'
+
+const { contact } = useClinicInfo()
 
 definePageMeta({
   layout: 'default'

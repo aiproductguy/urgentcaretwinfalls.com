@@ -35,8 +35,8 @@
         <section class="mt-16 text-center">
           <h3 class="mb-6 text-2xl font-semibold">Need Medical Care?</h3>
           <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <a href="tel:2087336700" class="button primary inline-flex items-center justify-center">
-              <Icon icon="mdi:phone" class="mr-2" />Call Now: (208) 733-6700
+            <a :href="`tel:${contact.phone.replace(/\D/g, '')}`" class="button primary inline-flex items-center justify-center">
+              <Icon icon="mdi:phone" class="mr-2" />Call Now: {{ contact.phone }}
             </a>
             <NuxtLink to="/#location" class="button secondary inline-flex items-center justify-center">
               <Icon icon="mdi:map-marker" class="mr-2" />Get Directions
@@ -51,6 +51,8 @@
 <script setup>
 import { Icon } from '@iconify/vue'
 import WhyChooseUs from '~/components/WhyChooseUs.vue'
+
+const { contact } = useClinicInfo()
 
 const services = [
   {

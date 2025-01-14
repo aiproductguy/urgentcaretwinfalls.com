@@ -102,7 +102,7 @@
       <h2>Schedule Your Imaging</h2>
       <p>
         Need diagnostic imaging? Walk in today or call 
-        <a href="tel:+12087336700">(208) 733-6700</a> for immediate service. 
+        <a :href="`tel:${contact.phone.replace(/\D/g, '')}`">{{ contact.phone }}</a> for immediate service. 
         Our imaging department is ready to provide you with fast, accurate diagnostic services.
       </p>
     </ServicePage>
@@ -111,6 +111,8 @@
 
 <script setup>
 import ServicePage from '@/components/ServicePage.vue'
+
+const { contact } = useClinicInfo()
 
 definePageMeta({
   layout: 'default'

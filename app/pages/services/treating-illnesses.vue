@@ -114,7 +114,7 @@
       <h2>Get Treatment Today</h2>
       <p>
         Don't let illness keep you down. Walk in today or call 
-        <a href="tel:+12087336700">(208) 733-6700</a> for immediate care. 
+        <a :href="`tel:${contact.phone.replace(/\D/g, '')}`">{{ contact.phone }}</a> for immediate care. 
         Our team is ready to help you feel better fast.
       </p>
     </ServicePage>
@@ -123,6 +123,8 @@
 
 <script setup>
 import ServicePage from '@/components/ServicePage.vue'
+
+const { contact } = useClinicInfo()
 
 definePageMeta({
   layout: 'default'

@@ -93,11 +93,11 @@
 const { googleMapsUrl } = useClinicInfo()
 
 useHead({
-  title: 'Contact Us | Urgent Care of Twin Falls',
+  title: 'Contact Us | Urgent Care Twin Falls',
   meta: [
     {
       name: 'description',
-      content: 'Contact Urgent Care of Twin Falls. We offer prompt medical care for non-life-threatening conditions. Call us or visit our facility in Twin Falls, Idaho.'
+      content: 'Contact Urgent Care Twin Falls. We offer prompt medical care for non-life-threatening conditions. Call us or visit our facility in Twin Falls, Idaho.'
     }
   ]
 })
