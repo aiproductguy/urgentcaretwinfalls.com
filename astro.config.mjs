@@ -12,7 +12,7 @@ export default defineConfig({
   }), compress()],
   output: 'static',
   build: {
-    assets: true,
+    assets: 'assets/astro_old',
     inlineStylesheets: 'auto'
   },
   vite: {
