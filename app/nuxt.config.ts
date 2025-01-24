@@ -41,7 +41,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         {
           rel: 'canonical',
-          href: 'https://urgentcaretwinfallscom.netlify.app'
+          href: 'https://aiproductguy.github.io/urgentcaretwinfalls.com'
         }
       ]
     }
@@ -75,7 +75,11 @@ export default defineNuxtConfig({
     preset: process.env.GITHUB_ACTIONS ? 'github-pages' : 'node-server',
     static: true,
     prerender: {
-      routes: ['/sitemap.xml']
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/sitemap.xml'
+      ]
     }
   },
 

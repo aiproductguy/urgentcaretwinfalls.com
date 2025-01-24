@@ -2,41 +2,41 @@ import { SitemapStream, streamToPromise } from 'sitemap'
 import { defineEventHandler } from 'h3'
 import { promises as fs } from 'fs'
 import { join } from 'path'
+import { useRuntimeConfig } from '#imports'
 
 async function getPages(dir: string): Promise<string[]> {
-  const pages: string[] = []
+  const pages = new Set<string>()
   const items = await fs.readdir(dir, { withFileTypes: true })
   
   for (const item of items) {
     const path = join(dir, item.name)
+    
     if (item.isDirectory()) {
-      // Add the directory index route
-      pages.push(path.replace(/^.*?pages/, '').replace(/\/index$/, '') || '/')
-      // Get all sub-pages
       const subPages = await getPages(path)
-      pages.push(...subPages)
+      subPages.forEach(page => pages.add(page))
     } else if (item.name.endsWith('.vue')) {
-      // Convert file path to URL path
       let urlPath = path
-        .replace(/^.*?pages/, '') // Remove everything before 'pages'
+        .split('pages')[1] // Get everything after 'pages'
         .replace(/\.vue$/, '') // Remove .vue extension
+        .replace(/\/index$/, '') // Remove trailing /index
+        || '/' // Use / for empty path
       
-      // Handle index files
-      if (item.name === 'index.vue') {
-        urlPath = urlPath.replace(/\/index$/, '') // Remove /index from the end
-      }
-      
-      pages.push(urlPath || '/') // Use / for home page
+      pages.add(urlPath)
     }
   }
   
-  return [...new Set(pages)] // Remove duplicates
+  return Array.from(pages).sort()
 }
 
 export default defineEventHandler(async (event) => {
-  // Create a new sitemap stream
+  const config = useRuntimeConfig()
+  const baseURL = process.env.GITHUB_ACTIONS 
+    ? 'https://aiproductguy.github.io/urgentcaretwinfalls.com'
+    : 'http://localhost:3000'
+
+  // Create a new sitemap stream with proper XML formatting
   const sitemap = new SitemapStream({
-    hostname: 'https://aiproductguy.github.io/urgentcaretwinfalls.com'
+    hostname: baseURL
   })
 
   try {
@@ -78,8 +78,8 @@ export default defineEventHandler(async (event) => {
 
     sitemap.end()
 
-    // Set response headers
-    event.node.res.setHeader('Content-Type', 'application/xml')
+    // Set response headers for XML
+    event.node.res.setHeader('Content-Type', 'application/xml; charset=UTF-8')
     event.node.res.setHeader('Cache-Control', 'public, max-age=3600')
 
     // Convert stream to string and return

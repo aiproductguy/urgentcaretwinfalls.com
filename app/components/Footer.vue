@@ -83,12 +83,12 @@
       <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-600 dark:text-gray-300">
         <div class="flex justify-between items-center">
           <div class="flex-1">
-            <div class="flex justify-center space-x-4 mb-4">
+            <div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
               <NuxtLink to="/privacy-policy" class="hover:text-primary-500">Privacy Policy</NuxtLink>
-              <span>•</span>
+              <span class="mx-2">•</span>
               <NuxtLink to="/terms-of-service" class="hover:text-primary-500">Terms of Service</NuxtLink>
-              <span>•</span>
-              <a href="/sitemap.xml" class="hover:text-primary-500">Sitemap</a>
+              <span class="mx-2">•</span>
+              <a :href="sitemapUrl" class="hover:text-primary-500">Sitemap</a>
             </div>
             <p>&copy; {{ new Date().getFullYear() }} Urgent Care Twin Falls. All rights reserved.</p>
           </div>
@@ -111,6 +111,12 @@
 import { Icon as IconifyIcon } from '@iconify/vue'
 
 const { contact, hours, isOpen } = useClinicInfo()
+const runtimeConfig = useRuntimeConfig()
+
+const sitemapUrl = computed(() => {
+  const baseURL = runtimeConfig.public.baseURL
+  return `${baseURL}sitemap.xml`.replace(/\/\//g, '/')
+})
 </script>
 
 <style scoped>
