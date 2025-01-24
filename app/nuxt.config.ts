@@ -73,7 +73,10 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: process.env.GITHUB_ACTIONS ? 'github-pages' : 'node-server',
-    static: true
+    static: true,
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   },
 
   routeRules: {
