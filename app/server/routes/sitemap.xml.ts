@@ -52,24 +52,29 @@ export default defineEventHandler(async (event) => {
       // Adjust priority and changefreq based on URL patterns
       if (page === '/') {
         priority = 1.0
-        changefreq = 'daily'
+        changefreq = 'monthly'
       } else if (page === '/location') {
         priority = 0.8
         changefreq = 'monthly'
       } else if (page === '/services') {
         priority = 0.9
-        changefreq = 'weekly'
+        changefreq = 'monthly'
       } else if (page === '/articles') {
         priority = 0.9
-        changefreq = 'weekly'
+        changefreq = 'monthly'
       } else if (page.startsWith('/services/')) {
         priority = 0.8
       } else if (page.startsWith('/articles/')) {
         priority = 0.7
       }
 
+      // Construct the full URL path
+      const urlPath = process.env.GITHUB_ACTIONS
+        ? `${page}`
+        : page
+
       sitemap.write({
-        url: page,
+        url: urlPath,
         changefreq,
         priority,
         lastmod: new Date().toISOString()
