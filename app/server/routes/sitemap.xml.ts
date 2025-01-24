@@ -69,9 +69,7 @@ export default defineEventHandler(async (event) => {
       }
 
       // Construct the full URL path
-      const urlPath = process.env.GITHUB_ACTIONS
-        ? `${page}`
-        : page
+      const urlPath = `${baseURL}${page}`
 
       sitemap.write({
         url: urlPath,
