@@ -6,7 +6,7 @@
         <div class="container">
           <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
             <div class="flex flex-col items-center gap-8 md:items-start">
-              <h1 class="text-center text-4xl md:text-left lg:text-8xl">
+              <h1 class="text-center text-4xl md:text-left lg:text-7xl">
                 <span class="text-gradient">Urgent Care</span> Twin Falls
               </h1>
               <p class="text-xl text-center md:text-left">

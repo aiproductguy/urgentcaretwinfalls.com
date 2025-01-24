@@ -10,12 +10,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Map Section -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full">
           <iframe
             :src="googleMapsUrl"
             width="100%"
-            height="450"
-            style="border:0;"
+            height="100%"
+            class="min-h-[450px] w-full h-full"
+            style="border:0; display: block;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

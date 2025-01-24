@@ -33,7 +33,7 @@
           <Icon icon="mdi:clock-fast" class="h-8 w-8 text-blue-600 flex-shrink-0" />
           <h3 class="text-xl font-semibold">Short Wait Times</h3>
         </div>
-        <p class="text-gray-600 dark:text-gray-300">Most patients are seen within 30 minutes of arrival or less.</p>
+        <p class="text-gray-600 dark:text-gray-300">Most patients are seen within 15 minutes of arrival or less.</p>
       </div>
 
       <div class="feature-card">
