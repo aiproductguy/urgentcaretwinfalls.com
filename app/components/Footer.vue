@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">
-            <NuxtLink to="/contact" class="hover:text-primary-500">Contact Us</NuxtLink>
+            <NuxtLink to="/location" class="hover:text-primary-500">Contact Us</NuxtLink>
           </h3>
           <p class="mt-2">
             <a :href="'tel:' + contact.phone.replace(/\D/g, '')" class="hover:text-primary-500 inline-flex items-center gap-2">
@@ -87,6 +87,8 @@
               <NuxtLink to="/privacy-policy" class="hover:text-primary-500">Privacy Policy</NuxtLink>
               <span>•</span>
               <NuxtLink to="/terms-of-service" class="hover:text-primary-500">Terms of Service</NuxtLink>
+              <span>•</span>
+              <a href="/sitemap.xml" class="hover:text-primary-500">Sitemap</a>
             </div>
             <p>&copy; {{ new Date().getFullYear() }} Urgent Care Twin Falls. All rights reserved.</p>
           </div>

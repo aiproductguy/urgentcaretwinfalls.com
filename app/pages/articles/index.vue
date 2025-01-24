@@ -44,7 +44,7 @@
             <a :href="`tel:${contact.phone.replace(/\D/g, '')}`" class="button primary inline-flex items-center justify-center">
               <Icon icon="mdi:phone" class="mr-2" />Call Now: {{ contact.phone }}
             </a>
-            <NuxtLink to="/contact" class="button secondary inline-flex items-center justify-center">
+            <NuxtLink to="/location" class="button secondary inline-flex items-center justify-center">
               <Icon icon="mdi:message" class="mr-2" />Contact Us
             </NuxtLink>
           </div>
