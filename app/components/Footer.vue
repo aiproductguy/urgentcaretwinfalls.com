@@ -92,15 +92,6 @@
             </div>
             <p>&copy; {{ new Date().getFullYear() }} Urgent Care Twin Falls. All rights reserved.</p>
           </div>
-          <div class="flex-shrink-0">
-            <img 
-              src="/REG-Central-IdahosBest2022-1280w.png" 
-              width="100" 
-              height="100"
-              alt="Idaho's Best Award Winner" 
-              class="award-badge"
-            />
-          </div>
         </div>
       </div>
     </div>

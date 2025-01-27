@@ -88,7 +88,7 @@
           <p>Some conditions may be reconsidered with proper management and documentation.</p>
 
           <h3>Cost and Insurance</h3>
-          <p>DOT physicals typically cost between $85-$150. Some employers may cover this expense. Contact us for current pricing and insurance information.</p>
+          <p>DOT physicals typically cost $140. Some employers may cover this expense. Contact us for current pricing and insurance information.</p>
         </ArticleTemplate>
       </main>
     </div>

@@ -103,7 +103,7 @@ export default defineNuxtConfig({
           state: 'ID',
           zip: '83301'
         },
-        phone: '(208) 555-5555',
+        phone: '(208) 903-2682',
         email: 'info@urgentcaretwinfalls.com',
         googleMapsUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.9623927753546!2d-114.47637859999999!3d42.5773207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aca2457605db65%3A0x24920c41025270b7!2s260%20Falls%20Ave%2C%20Twin%20Falls%2C%20ID%2083301!5e0!3m2!1sen!2sus!4v1726347046896!5m2!1sen!2sus'
       },

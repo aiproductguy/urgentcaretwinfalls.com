@@ -20,16 +20,6 @@
                 <a class="button secondary flex items-center justify-center gap-2" href="#location">
                   <Icon icon="mdi:map-marker" />Get Directions
                 </a>
-                <!-- Awards Section -->
-                <div class="awards-container flex gap-2 ml-4">
-                  <img 
-                    src="/REG-Central-IdahosBest2022-1280w.png"
-                    width="100" 
-                    height="100"
-                    alt="Idaho's Best Award Winner" 
-                    class="award-badge"
-                  />
-                </div>
               </div>
             </div>
             <img class="hidden lg:block rounded-lg shadow-xl" src="/location-front.png" alt="Urgent Care Twin Falls Facility" decoding="async" />
